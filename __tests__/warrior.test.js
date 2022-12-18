@@ -8,9 +8,10 @@ describe('Warrior', () => {
 
   test('should correctly create a warrior object with three stats', () => {
     const warrior = new Warrior ();
-    expect(warrior.intelligence).toEqual('')
-    expect(warrior.strength).toEqual('')
-    expect(warrior.dexterity).toEqual('')
+    expect(warrior.intelligence).toEqual(2)
+    expect(warrior.strength).toEqual(2)
+    expect(warrior.dexterity).toEqual(2)
+    expect(warrior.hp).toEqual(3);
   });
   
 });
