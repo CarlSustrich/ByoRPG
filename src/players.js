@@ -1,4 +1,10 @@
-export default class Game {
+export default class Players {
+
+
+  checkEquipped() {
+
+  }
+
   getAttackedBy(attacker) {
     let hitPercentage = (this.dexterity * 0.5) + diceRoll();
 
@@ -36,6 +42,8 @@ export default class Game {
   }
 }
 
+
+
 class Warrior extends Game{
   constructor () {
     super ();
@@ -45,10 +53,12 @@ class Warrior extends Game{
     this.strength = diceRoll();
     this.intelligence = diceRoll();
     this.dexterity = diceRoll();
-    this.armor = 0;
-    this.magicResistance = 0;
+    this.defense = this.armor ? this.armor.defense : 0;
+    this.magicResistance = this.armor ? this.armor.magicResistance : 0;
     this.exp = 0;
     this.inv = [];
+    this.weapon = null;
+    this.armor = null;
   }
 }
 
@@ -61,10 +71,12 @@ class Wizard extends Game{
     this.strength = diceRoll();
     this.intelligence = diceRoll(); 
     this.dexterity = diceRoll();
-    this.armor = 0;
-    this.magicResistance = 0;
+    this.defense = this.armor ? this.armor.defense : 0;
+    this.magicResistance = this.armor ? this.armor.magicResistance : 0;
     this.exp = 0;
     this.inv = [];
+    this.weapon = null;
+    this.armor = null;
   }
 }
 

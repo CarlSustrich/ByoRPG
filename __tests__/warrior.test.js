@@ -1,4 +1,4 @@
-import Warrior from '../src/warrior.js';
+import Player from '../src/players.js';
 
 describe('Warrior', () => {
 
@@ -11,7 +11,7 @@ describe('Warrior', () => {
     expect(warrior.intelligence).toEqual(2)
     expect(warrior.strength).toEqual(2)
     expect(warrior.dexterity).toEqual(2)
-    expect(warrior.hp).toEqual(3);
+    expect(warrior.hp).toEqual();
   });
   
 });
